@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimeMachineFragment">
+
+
+    <TextView
+        android:id="@+id/time_Machine_Fragment_Textview_StartDate_Topic"
+        android:layout_width="82dp"
+        android:layout_height="19dp"
+        android:gravity="right"
+        android:text="@string/fragment_time_machine_start_date_topic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/time_Machine_Fragment_EditText_StartDate"
+        app:layout_constraintEnd_toStartOf="@+id/time_Machine_Fragment_EditText_StartDate" />
+
+    <TextView
+        android:id="@+id/time_Machine_Fragment_Textview_EndDate_Topic"
+        android:layout_width="82dp"
+        android:layout_height="19dp"
+        android:gravity="right"
+        android:text="@string/fragment_time_machine_end_date_topic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/time_Machine_Fragment_EditText_EndDate"
+        app:layout_constraintEnd_toStartOf="@+id/time_Machine_Fragment_EditText_EndDate" />
+
+    <EditText
+        android:id="@+id/time_Machine_Fragment_EditText_StartDate"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:text="@string/fragment_time_machine_start_date_default_value"
+        app:layout_constraintEnd_toEndOf="@+id/time_Machine_Fragment_EditText_EndDate"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/time_Machine_Fragment_EditText_EndDate"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="@string/fragment_time_machine_end_date_default_value"
+        app:layout_constraintEnd_toEndOf="@+id/time_Machine_Fragment_Button_TimeTravel"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_EditText_StartDate"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/time_Machine_Fragment_Button_TimeTravel"
+        android:layout_width="178dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/fragment_time_machine_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_Textview_EndDate_Topic" />
+
+    <RelativeLayout
+        android:id="@+id/time_Machine_Fragment_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_Button_TimeTravel"
+        tools:layout_editor_absoluteX="-91dp">
+
+        <TextView
+            android:id="@+id/time_Machine_Fragment_TextView_Results_Topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/fragment_time_machine_results"
+            android:textColor="#DD2C00" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/time_Machine_Fragment_TextView_Results_Topic"
+            android:background="#000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/time_Machine_Fragment_TextView_Results_Topic"
+            android:background="#000000" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time_Machine_Fragment_Textview_BuyDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_time_machine_buy_date_default_value"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/time_Machine_Fragment_Textview_BestDayToBuy"
+        app:layout_constraintStart_toStartOf="@+id/time_Machine_Fragment_Textview_BestDayToBuy"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_Textview_BestDayToBuy" />
+
+    <TextView
+        android:id="@+id/time_Machine_Fragment_Textview_SellDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_time_machine_sell_date_default_value"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/time_Machine_Fragment_Textview_BestDayToSell"
+        app:layout_constraintStart_toStartOf="@+id/time_Machine_Fragment_Textview_BestDayToSell"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_Textview_BestDayToSell" />
+
+    <TextView
+        android:id="@+id/time_Machine_Fragment_Textview_BestDayToBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/fragment_time_machine_best_day_buy_topic"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_relativeLayout" />
+
+    <TextView
+        android:id="@+id/time_Machine_Fragment_Textview_BestDayToSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_time_machine_best_day_sell_topic"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_Machine_Fragment_Textview_BuyDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

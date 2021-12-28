@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HistoryFragment">
+
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_StartDate_Topic"
+        android:layout_width="82dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="60dp"
+        android:gravity="right"
+        android:text="@string/fragment_history_start_date_topic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/historyFragment_EditText_StartDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/historyFragment_EditText_StartDate"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:text="@string/fragment_history_start_date_default_value"
+        app:layout_constraintStart_toEndOf="@+id/historyFragment_Textview_StartDate_Topic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/historyFragment_EditText_EndDate"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="@string/fragment_history_end_date_default_value"
+        app:layout_constraintEnd_toEndOf="@+id/historyFragment_EditText_StartDate"
+        app:layout_constraintStart_toStartOf="@+id/historyFragment_EditText_StartDate"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_EditText_StartDate"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/historyFragment_Button_Analyze"
+        android:layout_width="178dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/fragment_history_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_Textview_EndDate_Topic" />
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_LongestDownwardTrend"
+        android:layout_width="191dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.5"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="none"
+        android:singleLine="false"
+        android:text="@string/fragment_history_downward_trend_topic"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_LongestDownwardDays"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_weight="0.5"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="none"
+        android:text="@string/fragment_history_downward_days"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/historyFragment_Textview_LongestDownwardTrend"
+        app:layout_constraintStart_toStartOf="@+id/historyFragment_Textview_LongestDownwardTrend"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_Textview_LongestDownwardTrend" />
+
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_EndDate_Topic"
+        android:layout_width="82dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="60dp"
+        android:gravity="right"
+        android:text="@string/fragment_history_end_date_topic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/historyFragment_EditText_EndDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_Button_Analyze"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/historyFragment_TextView_Results_Topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/fragment_history_results"
+            android:textColor="#DD2C00" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/historyFragment_TextView_Results_Topic"
+            android:background="#000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/historyFragment_TextView_Results_Topic"
+            android:background="#000000" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_HighestVolume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/fragment_history_trading_volume_topic"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/historyFragment_Textview_LongestDownwardTrend"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/historyFragment_Textview_LongestDownwardTrend"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_Textview_LongestDownwardDays" />
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_HighestVolumeValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/fragment_history_highest_volume_default_value"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/historyFragment_Textview_HighestVolume"
+        app:layout_constraintStart_toStartOf="@+id/historyFragment_Textview_HighestVolume"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_Textview_HighestVolume" />
+
+    <TextView
+        android:id="@+id/historyFragment_Textview_HighestVolumeDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/fragment_history_highest_volume_date_default_value"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/historyFragment_Textview_HighestVolumeValue"
+        app:layout_constraintStart_toStartOf="@+id/historyFragment_Textview_HighestVolumeValue"
+        app:layout_constraintTop_toBottomOf="@+id/historyFragment_Textview_HighestVolumeValue" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

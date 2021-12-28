@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Pre-assignment</string>
+    <string name="apiurl">https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&amp;from=%1$d&amp;to=%2$d</string>
+    <string name="currency">€</string>
+    <string name="timezone">UTC</string>
+    <string name="datepattern">yyyy/MM/dd</string>
+    <string name="date_error_message">invalid date/format, use</string>
+    <string name="first_tab_name">History</string>
+    <string name="second_tab_name">Time Machine</string>
+    <string name="fragment_history_end_date_topic">End Date:</string>
+    <string name="fragment_history_end_date_default_value">2020/12/31</string>
+    <string name="fragment_history_button">Analyze</string>
+    <string name="fragment_history_start_date_topic">Start Date:</string>
+    <string name="fragment_history_start_date_default_value">2020/01/01</string>
+    <string name="fragment_history_results">Results</string>
+    <string name="fragment_history_downward_days">n/a</string>
+    <string name="fragment_history_trading_volume_topic">The highest trading volume</string>
+    <string name="fragment_history_highest_volume_default_value">n/a</string>
+    <string name="fragment_history_highest_volume_date_default_value">n/a</string>
+    <string name="fragment_history_downward_trend_topic">The longest downward trend</string>
+    <string name="fragment_time_machine_start_date_topic">Start Date:</string>
+    <string name="fragment_time_machine_start_date_default_value">2020/01/01</string>
+    <string name="fragment_time_machine_end_date_topic">End Date:</string>
+    <string name="fragment_time_machine_end_date_default_value">2020/02/27</string>
+    <string name="fragment_time_machine_button">Time travel!</string>
+    <string name="fragment_time_machine_results">Results</string>
+    <string name="fragment_time_machine_buy_date_default_value">n/a</string>
+    <string name="fragment_time_machine_sell_date_default_value">n/a</string>
+    <string name="fragment_time_machine_best_day_buy_topic">The best day to buy:</string>
+    <string name="fragment_time_machine_best_day_sell_topic">The best day to sell:</string>
+    <string name="fragment_time_machine_no_profit_message">No profit!</string>
+</resources>
